@@ -45,7 +45,8 @@ const Testimonial = (
 
   useEffect(() => {
     if (isPresent) {
-      quoteEntranceAnimation().then(() => citeEntranceAnimation());
+      // quoteEntranceAnimation().then(() => citeEntranceAnimation());
+      quoteEntranceAnimation()?.then(() => citeEntranceAnimation());
     } else {
       Promise.all([quoteExitAnimation(), citeExitAnimation()]).then(() =>
         safeToRemove()
